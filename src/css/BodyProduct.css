@@ -1,0 +1,51 @@
+.Body {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.BodyProduct {
+    width: 97%;
+    height: 600px;
+    background-color: #96aa92;
+    margin: 0;
+}
+
+.TitleSectionProduct h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    font-size: 40px;
+
+}
+
+.Product {
+    display: flex;
+    justify-content: center;
+    width: 97%;
+    height: 520px;
+    background-color: #e1ebd2;
+    margin: 1rem;
+}
+
+
+.Footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F9F9F9; 
+    width: 100%;
+    gap: 0.5rem;
+    height: 50px;
+}
+
+.Footer img {
+    width: 25px;
+}
+
+.Footer b {
+    margin: 0;
+    font-size: 14px;
+}
