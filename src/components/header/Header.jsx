@@ -10,7 +10,7 @@ import "/src/css/Header.css"
 export const Header = () => {
     return (
         <nav className="Header">
-            <div className="Social">
+            <div className="Social" >
                 <Social text="Siguenos en: " />
             </div>
             <div className="TitleHeader">
