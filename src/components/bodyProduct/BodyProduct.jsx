@@ -1,5 +1,6 @@
 //Components
 import { Title } from "../header/Title"
+import { Product } from "./Product"
 //Style
 import "/src/css/BodyProduct.css"
 //import { Product } from "./Product.jsx"
@@ -12,7 +13,7 @@ export const BodyProduct = () => {
                     <Title text="Nuestros Productos" />
                 </div>
                 <div className="Product">
-                    <h1></h1>
+                    <Product />
                 </div>
             </div>
         </section>

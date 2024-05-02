@@ -6,7 +6,7 @@
 
 .BodyProduct {
     width: 97%;
-    height: 600px;
+    height: auto;
     background-color: #96aa92;
     margin: 0;
 }
@@ -25,7 +25,7 @@
     display: flex;
     justify-content: center;
     width: 97%;
-    height: 520px;
+    height: auto;
     background-color: #e1ebd2;
     margin: 1rem;
 }
