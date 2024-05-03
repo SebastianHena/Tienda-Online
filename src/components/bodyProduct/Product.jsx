@@ -5,7 +5,6 @@ import { Card } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 
 
-
 const GET_PRODUCTS = 'http://127.0.0.1:8000/product'
 
 export const Product = () => {
@@ -26,29 +25,34 @@ export const Product = () => {
 
   return (
     <>
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "start", alignItems: "center" }}>
+      <div className="flex flex-wrap justify-center items-center">
         {
+          products.length === 0 ? (
+            <p>No hay productos disponibles.</p>
+          ) : (
           products.map(product => (
-            <div key={product.ID_PRODUCT} style={{ margin: "1rem" }}>
-              <Card style={{ width: '11.5rem', height: "auto", background: "#F9F9F9", borderRadius: "1rem", padding: "1rem" }}>
-                <Card.Img variant="top" src={product.IMAGE} style={{ width: "100%", display: "flex", borderRadius: "1rem" }} />
-                <Card.Body style={{ display: "flex", justifyContent: "center", alignItems: "stretch", flexDirection: "column", width: "100%" }}>
-                  <Card.Title>{product.NAME}</Card.Title>
-                  <Card.Text style={{ margin: "0" }}>
+            <div key={product.ID_PRODUCT} className="m-4">
+              <Card className="w-52 h-auto bg-Card-color rounded-2xl p-4">
+                <Card.Img variant="top" src={product.IMAGE} className="w-full flex rounded-2xl" />
+                <Card.Body className="flex justify-center items-stretch flex-col w-full">
+                  <Card.Title className="m-1 w-full text-lg font-bold whitespace-nowrap truncate" >
+                    {product.NAME}
+                  </Card.Title>
+                  <Card.Text className="m-1 w-full whitespace-nowrap truncate">
                     {product.DESCRIPTION}
                   </Card.Text>
-                  <Card.Text style={{ margin: "0" }}>
-                    {product.DESCRIPTION}
-                  </Card.Text>
-                  <Card.Text style={{ margin: "0" }}>
-                    <p>Precio: {product.PRICE}$ COP</p>
-                  </Card.Text>
-                  <Button variant="primary">
-                    Agregar al carrito
-                  </Button>
+                  <div className="flex items-center mt-2">
+                    <Card.Text className="m-1 w-full text-xs">
+                      <p>{product.PRICE}$ COP</p>
+                    </Card.Text>
+                    <Button className="bg-slate-600 rounded-md p-1 w-full text-xs text-white font-bold hover:bg-gray-800">
+                      Agregar al carrito
+                    </Button>
+                  </div>
                 </Card.Body>
               </Card>
             </div>
+          )
           ))}
       </div>
     </>
