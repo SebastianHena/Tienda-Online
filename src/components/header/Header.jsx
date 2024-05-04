@@ -1,25 +1,29 @@
-//Hooks
 //Components
-import { Social } from "./social/Social"
-import { Title } from "./Title"
-import { Register } from "./Register"
-import { Login } from "./Login"
+import { Register } from "./auth/Register"
+import { Login } from "./auth/Login"
+import { Logo } from "../varied/Logo"
+import { Link } from "../varied/Link"
+import { Icon } from "../varied/Icon"
 
 export const Header = () => {
     return (
-        <nav className="flex justify-between bg-BodyProduct py-2 px-8 h-12">
-            <div className="flex items-center gap-2">
-                <Social text="Siguenos en: " />
+        <nav className="flex justify-between items-center bg-HeaderColor py-2 px-8 h-20">
+            <div className="flex gap-1 items-center">
+                <Logo icon="icons/Fuxion.png" width="w-8" size="m-0 text-2xl text-white" text="MamáAlNatural" />
             </div>
-            <div className=" text-4xl">
-                <Title className="flex items-center w-full m-0" text="MamáAlNatutalShop" />
+            <div className="flex gap-6 text-xl text-white">
+                <Link text="Inicio" url="/" />
+                <Link text="Productos" url="/product" />
+                <Link text="Blog" url="/blog" />
+                <Link text="Contacto" url="/contact" />
             </div>
-            <div className="flex items-center gap-4">
-                <Login url="http://localhost:5173/"
-                    text="Iniciar Sesión" />
-                <Register
-                    url="http://localhost:5173/"
-                    text="Registrarse" />
+            <div className="flex gap-8 items-center text-white">
+                <Icon icon="icons/lupa.png" />
+                <Icon icon="icons/carrito.png" />
+                <div className="flex gap-4">
+                    <Login text="Iniciar sesión" url="" />  
+                    <Register text="Registrarse" url="" />
+                </div>
             </div>
         </nav>
     )
