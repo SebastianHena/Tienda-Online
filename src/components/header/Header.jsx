@@ -14,7 +14,6 @@ export const Header = () => {
             <div className="flex gap-6 text-xl text-white">
                 <Link text="Inicio" url="/" />
                 <Link text="Productos" url="/product" />
-                <Link text="Blog" url="/blog" />
                 <Link text="Contacto" url="/contact" />
             </div>
             <div className="flex gap-8 items-center text-white">

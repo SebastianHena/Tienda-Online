@@ -9,8 +9,10 @@ import { BodyProduct } from './pages/BodyProduct.jsx';
 import { Home } from './pages/Home.jsx';
 import { Blog } from './pages/Blog.jsx'
 import { Contact } from './pages/Contact.jsx'
+import { ProductInfo } from './pages/ProductInfo.jsx';
 //Style
 import "./css/index.css"
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
@@ -22,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/product" element={<BodyProduct />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/productInfo" element={<ProductInfo />} />
         </Routes>
       </BrowserRouter>
     </StrictMode>

@@ -8,9 +8,9 @@ export default {
     extend: {
       backgroundColor: {
         'Card-color': '#F9F9F9',
-        'HeaderColor': '#0E7489 ',
-        'BodyProduct': '#96aa92',
-        'Product': '#e1ebd2',
+        'HeaderColor': '#1793AD ',
+        'BodyProduct': '#A1D3DD',
+        'Product': '#E1F6FB',
         'Text': '#333333'
       },
       spacing: {

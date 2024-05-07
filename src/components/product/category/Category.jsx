@@ -31,7 +31,7 @@ export const Category = () => {
           ) : (
           categories.map(category => (
             <div key={category.ID_CATEGORY} className="m-4">
-              <Card className="w-30 h-auto bg-Card-color rounded-lg p-4">
+              <Card className="w-30 h-auto rounded-lg p-4 border border-cyan-950">
                 <Card.Img variant="top" src={category.IMAGE} className="w-full flex rounded-2xl" />
                 <Card.Body className="flex justify-center items-stretch flex-col w-full">
                   <Card.Title className="m-1 w-full text-xs font-bold whitespace-nowrap truncate" >

@@ -32,7 +32,7 @@ export const Product = () => {
           ) : (
           products.map(product => (
             <div key={product.ID_PRODUCT} className="m-4">
-              <Card className="w-52 h-auto bg-Card-color rounded-2xl p-4">
+              <Card className="w-52 h-auto bg-Card-color rounded-2xl p-4 border border-cyan-950">
                 <Card.Img variant="top" src={product.IMAGE} className="w-full flex rounded-2xl" />
                 <Card.Body className="flex justify-center items-stretch flex-col w-full">
                   <Card.Title className="m-1 w-full text-lg font-bold whitespace-nowrap truncate" >
