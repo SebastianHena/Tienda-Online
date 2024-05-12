@@ -1,26 +1,18 @@
 //Hooks
 import { useState, useEffect } from "react";
+
 //Components boostrap
 import { Card } from "react-bootstrap";
 
+//Services
+import { getCategory } from "../../../services/product.services/category/category.services";
 
-const GET_CATEGORIES = 'http://127.0.0.1:8000/category'
 
 export const Category = () => {
 
   const [categories, setCategories] = useState([])
 
-  useEffect(() => {
-    fetch(GET_CATEGORIES)
-      .then(res => res.json())
-      .then(data => {
-        console.log("Datos recibidos:", data);
-        setCategories(data);
-      })
-      .catch(error => {
-        console.error("Error al obtener los datos:", error);
-      });
-  }, []);
+  useEffect(() => { getCategory().then(setCategories) }, []);
 
   return (
     <>

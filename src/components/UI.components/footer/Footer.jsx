@@ -1,5 +1,5 @@
 //Components
-import { Logo } from "../varied/Logo"
+import { Logo } from "../Logo"
 
 export const Footer = () => {
     return (

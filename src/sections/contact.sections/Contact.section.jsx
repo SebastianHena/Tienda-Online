@@ -1,6 +1,6 @@
 import Form from 'react-bootstrap/Form';
 
-export const CardContact = () => {
+export const ContactSection = () => {
     return (
         <Form className='w-1/2 grid gap-4 p-4 bg-gray-200 rounded-lg'>
 
