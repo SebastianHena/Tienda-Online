@@ -1,11 +1,13 @@
 //Components
-import { BodyHome } from "../sections/home.sections/BodyHome"
+import { Carrusel } from "../sections/home.sections/Carrusel.section"
+import { Portada } from "../sections/home.sections/Portada"
 
 export const Home = () => {
     return (
         <>
-        <BodyHome />
+        <Portada />
+        <Carrusel />
         </>
-        
+
     )
 }
