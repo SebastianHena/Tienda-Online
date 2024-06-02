@@ -2,7 +2,7 @@ import { CarruselHome } from "../../components/home.components/Carrusel"
 
 export const Carrusel = () => {
     return (
-        <section>
+        <section >
             <CarruselHome />
         </section>
     )

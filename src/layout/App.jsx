@@ -14,7 +14,7 @@ import { ProductInfo } from '../pages/ProductInfo.Page.jsx';
 
 export function App() {
   return (
-    <main className="overflow-y-auto">
+    <main className='grid justify-center items-center justify-items-center'>
       <Header />
         <BrowserRouter>
           <Routes>

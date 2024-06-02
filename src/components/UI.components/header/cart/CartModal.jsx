@@ -1,8 +1,8 @@
-import { AiOutlineClose } from 'react-icons/ai'
+import { AiOutlineClose } from 'react-icons/ai';
 
 export const Modal = ({ handleClose }) => {
     return (
-        <div className="fixed inset-0 flex justify-end bg-gray-900 bg-opacity-50">
+        <div className="fixed inset-0 flex justify-end bg-gray-900 bg-opacity-50 z-50">
             <div className="bg-white p-8 w-96">
                 <div className="flex justify-between">
                     <h2 className="text-lg font-bold text-black">Productos del carrito</h2>
@@ -11,25 +11,25 @@ export const Modal = ({ handleClose }) => {
                     </button>
                 </div>
                 <div>
-                    <div class="min-w-0 flex-auto border border-cyan-900 rounded-md p-2 mt-4 mb-4">
-                        <p class="text-sm font-semibold leading-6 text-gray-900">Producto 1</p>
-                        <p class="mt-1 truncate text-xs leading-5 text-gray-500">Descripción</p>
+                    <div className="min-w-0 flex-auto border border-cyan-900 rounded-md p-2 mt-4 mb-4">
+                        <p className="text-sm font-semibold leading-6 text-gray-900">Producto 1</p>
+                        <p className="mt-1 truncate text-xs leading-5 text-gray-500">Descripción</p>
                     </div>
-                    <div class="min-w-0 flex-auto border border-cyan-900 rounded-md p-2 mt-4 mb-4">
-                        <p class="text-sm font-semibold leading-6 text-gray-900">Producto 1</p>
-                        <p class="mt-1 truncate text-xs leading-5 text-gray-500">Descripción</p>
+                    <div className="min-w-0 flex-auto border border-cyan-900 rounded-md p-2 mt-4 mb-4">
+                        <p className="text-sm font-semibold leading-6 text-gray-900">Producto 1</p>
+                        <p className="mt-1 truncate text-xs leading-5 text-gray-500">Descripción</p>
                     </div>
-                    <div class="min-w-0 flex-auto border border-cyan-900 rounded-md p-2 mt-4 mb-4">
-                        <p class="text-sm font-semibold leading-6 text-gray-900">Producto 1</p>
-                        <p class="mt-1 truncate text-xs leading-5 text-gray-500">Descripción</p>
+                    <div className="min-w-0 flex-auto border border-cyan-900 rounded-md p-2 mt-4 mb-4">
+                        <p className="text-sm font-semibold leading-6 text-gray-900">Producto 1</p>
+                        <p className="mt-1 truncate text-xs leading-5 text-gray-500">Descripción</p>
                     </div>
-                    <div class="min-w-0 flex-auto border border-cyan-900 rounded-md p-2 mt-4 mb-4">
-                        <p class="text-sm font-semibold leading-6 text-gray-900">Producto 1</p>
-                        <p class="mt-1 truncate text-xs leading-5 text-gray-500">Descripción</p>
+                    <div className="min-w-0 flex-auto border border-cyan-900 rounded-md p-2 mt-4 mb-4">
+                        <p className="text-sm font-semibold leading-6 text-gray-900">Producto 1</p>
+                        <p className="mt-1 truncate text-xs leading-5 text-gray-500">Descripción</p>
                     </div>
-                    <div class="min-w-0 flex-auto border border-cyan-900 rounded-md p-2 mt-4 mb-4">
-                        <p class="text-sm font-semibold leading-6 text-gray-900">Producto 1</p>
-                        <p class="mt-1 truncate text-xs leading-5 text-gray-500">Descripción</p>
+                    <div className="min-w-0 flex-auto border border-cyan-900 rounded-md p-2 mt-4 mb-4">
+                        <p className="text-sm font-semibold leading-6 text-gray-900">Producto 1</p>
+                        <p className="mt-1 truncate text-xs leading-5 text-gray-500">Descripción</p>
                     </div>
                 </div>
                 <div className="left-0 right-0 flex justify-center pb-8">

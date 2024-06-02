@@ -4,6 +4,7 @@ import { App } from './layout/App.jsx'
 import { StrictMode } from 'react'
 //Style
 import "./css/index.css"
+import { root } from 'postcss'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -13,3 +14,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </StrictMode>
   </>
 )
+

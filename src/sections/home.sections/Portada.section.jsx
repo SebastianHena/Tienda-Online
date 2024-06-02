@@ -3,9 +3,9 @@ import { PortadaPrincipal } from "../../components/home.components/PortadaPrinci
 export const Portada = ({ }) => {
     return (
         <>
-        <section>
-            <PortadaPrincipal />
-        </section>
+            <section>
+                    <PortadaPrincipal />
+            </section>
         </>
     )
 }
