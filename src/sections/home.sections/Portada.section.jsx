@@ -3,8 +3,8 @@ import { PortadaPrincipal } from "../../components/home.components/PortadaPrinci
 export const Portada = ({ }) => {
     return (
         <>
-            <section>
-                    <PortadaPrincipal />
+            <section className="flex justify-center">
+                <PortadaPrincipal />
             </section>
         </>
     )

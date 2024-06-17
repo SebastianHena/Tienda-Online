@@ -14,8 +14,9 @@ import { ProductInfo } from '../pages/ProductInfo.Page.jsx';
 
 export function App() {
   return (
-    <main className='grid justify-center items-center justify-items-center'>
+    <>
       <Header />
+      <main>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -25,7 +26,8 @@ export function App() {
             <Route path="/productInfo" element={<ProductInfo />} />
           </Routes>
         </BrowserRouter>
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }

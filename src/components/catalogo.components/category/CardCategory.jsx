@@ -22,7 +22,7 @@ export const CardCategory = () => {
             <p className="text-black">No hay categorias disponibles.</p>
           ) : (
           categories.map(category => (
-            <div key={category.ID_CATEGORY} className="m-4">
+            <article key={category.ID_CATEGORY} className="m-4">
               <Card className="w-30 h-auto bg-white bg-opacity-95 rounded-md p-4">
                 <Card.Img variant="top" src={category.IMAGE} className="w-full flex rounded-2xl" />
                 <Card.Body className="flex justify-center items-stretch flex-col w-full">
@@ -34,7 +34,7 @@ export const CardCategory = () => {
                   </Card.Text>
                 </Card.Body>
               </Card>
-            </div>
+            </article>
           )
           ))}
       </section>

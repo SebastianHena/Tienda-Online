@@ -4,6 +4,8 @@ FormContact
 
 export const CardContact = () => {
     return (
-        <FormContact />
+        <section className="w-[80%] flex justify-center">
+            <FormContact />
+        </section>
     )
 }

@@ -1,8 +1,8 @@
 export const Follow = ({name, url}) => {
     return (
-            <ul class="text-black font-medium">
-                <li class="mb-4">
-                    <a href={url} class="hover:underline ">{name}</a>
+            <ul className="font-medium">
+                <li className="mb-4">
+                    <a href={url} className="hover:underline ">{name}</a>
                 </li>
             </ul>
     )

@@ -1,6 +1,6 @@
 export const PortadaPrincipal = () => {
     return (
-        <article className="grid justify-center mt-8 p-8">
+        <article className="mt-8 p-8 w-[94%]">
             <img src="/imgs/PortadaPrincipal.png" alt="" className="rounded" />
         </article>
     )
