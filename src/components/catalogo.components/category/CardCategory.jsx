@@ -19,24 +19,24 @@ export const CardCategory = () => {
       <section className="flex flex-wrap justify-center items-center">
         {
           categories.length === 0 ? (
-            <p className="text-black">No hay categorias disponibles.</p>
+            <p className="flex justify-center items-center text-black">No hay categorias disponibles.</p>
           ) : (
-          categories.map(category => (
-            <article key={category.ID_CATEGORY} className="m-4">
-              <Card className="w-30 h-auto bg-white bg-opacity-95 rounded-md p-4">
-                <Card.Img variant="top" src={category.IMAGE} className="w-full flex rounded-2xl" />
-                <Card.Body className="flex justify-center items-stretch flex-col w-full">
-                  <Card.Title className="m-1 w-full text-xs text-black font-semibold whitespace-nowrap truncate" >
-                    {category.NAME}
-                  </Card.Title>
-                  <Card.Text className="m-1 w-full text-black text-opacity-85 truncate">
-                    {category.DESCRIPTION}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </article>
-          )
-          ))}
+            categories.map(category => (
+              <article key={category.ID_CATEGORY} className="m-4">
+                <Card className="w-48 h-auto bg-gray-300 bg-opacity-95 rounded-md p-4">
+                  <Card.Img variant="top" src={category.IMAGE} className="w-full flex rounded-2xl" />
+                  <Card.Body className="flex flex-col justify-center items-center py-4 px-2 w-full truncate">
+                    <Card.Title className="flex justify-center items-center m-1 w-full text-xs text-black font-semibold">
+                      {category.NAME}
+                    </Card.Title>
+                    <Card.Text className="m-1 w-full text-black text-opacity-85">
+                      {category.DESCRIPTION}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </article>
+            )
+            ))}
       </section>
     </>
   )

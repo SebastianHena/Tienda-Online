@@ -8,6 +8,9 @@ export default {
     extend: {
       backgroundColor: {
       },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(28deg, transparent 10%, #64748B 0% 90%, transparent 80%)',
+      },
       spacing: {
         '97': '97%'
       },

@@ -1,4 +1,4 @@
-export const Pagination = ({ productForPage, currentPage, setCurrentPage, totalProducts }) => {
+export const PaginationProduct = ({ productForPage, currentPage, setCurrentPage, totalProducts }) => {
 
     const pageNumber = []
 
@@ -14,40 +14,29 @@ export const Pagination = ({ productForPage, currentPage, setCurrentPage, totalP
     const nextPage = () => {
         setCurrentPage(currentPage + 1)
     }
-    
+
     const specificPage = (n) => {
         setCurrentPage(n)
+    }
+
+    const disableButton = () => {
+        if (currentPage > 1)
+            setCurrentPage(previusPage)
+        else
+            setCurrentPage(disabled)
     }
 
 
     return (
         <div className="flex items-center justify-between w-full h-auto mt-8 px-4 py-3 sm:px-6">
 
-
-            <div className="flex flex-1 justify-between gap-2 sm:hidden">
-                <a
-                    href="#"
-                    className="relative inline-flex items-center rounded-md text-black px-4 py-2 text-sm font-medium hover:bg-gray-50"
-                >
-                    Anterior
-                </a>
-                <a
-                    href="#"
-                    className="relative ml-3 inline-flex items-center rounded-md  text-black px-4 py-2 text-sm font-medium hover:bg-gray-50"
-                >
-                    Siguiente
-                </a>
-            </div>
-
-
             <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
                 <div>
                     <nav className="flex justify-between gap-10 items-center isolate  rounded-md" aria-label="Pagination">
                         <div>
                             <button
-                                disabled
-                                className={`relative cursor-pointer inline-flex items-center rounded-l-md px-2 py-2 text-black hover:bg-gray-50 focus:z-20 focus:outline-offset-0
-                                ${currentPage === 1 ? 'disabled:pointer-events-none' : ''}`}
+                                className={`relative cursor-pointer inline-flex items-center rounded-l-md px-2 py-2 bg-gray-800 hover:bg-gray-700 focus:z-20 focus:outline-offset-0
+                                ${currentPage < 1 ? 'disabled:pointer-events-none' : ''}`}
                                 onClick={previusPage}
                             >
                                 Anterior
@@ -65,7 +54,7 @@ export const Pagination = ({ productForPage, currentPage, setCurrentPage, totalP
                                             onClick={() => specificPage(numPage)}
                                         >
                                             {numPage}
-                                            
+
                                         </a>
                                     </li>
                                 ))
@@ -74,9 +63,9 @@ export const Pagination = ({ productForPage, currentPage, setCurrentPage, totalP
 
                         <div>
                             <button
-                            
-                                className={`relative cursor-pointer inline-flex items-center rounded-r-md px-2 py-2 text-black hover:bg-gray-50 focus:z-20 focus:outline-offset-0
-                                ${currentPage >= pageNumber.length ? `${'disabled'}` : ''}`}
+
+                                className={`relative cursor-pointer inline-flex items-center rounded-r-md px-2 py-2 bg-gray-800 hover:bg-gray-700 focus:z-20 focus:outline-offset-0
+                                ${currentPage > pageNumber.length ? 'disabled:pointer-events-none' : ''}`}
                                 onClick={nextPage}
                             >
                                 Siguiente

@@ -7,14 +7,14 @@ import Button from 'react-bootstrap/Button';
 
 //Services
 import { getProduct } from "../../../services/product.services/product/product.services";
-import { Pagination } from "../pagination/Pagination";
+import { PaginationProduct } from "../pagination/PaginationProduct";
 
 
 export const CardProduct = () => {
 
   const [products, setProducts] = useState([])
   const totalProducts = products.length
-  const [productForPage, setProductForPage] = useState(6)
+  const [productForPage, setProductForPage] = useState(12)
   const [currentPage, setCurrentPage] = useState(1)
 
   const lastIndex = currentPage * productForPage
@@ -33,7 +33,7 @@ export const CardProduct = () => {
             ) : (
               products.map(product => (
                 <article key={product.ID_PRODUCT} className="m-4">
-                  <Card className="w-52 h-auto bg-white bg-opacity-80 rounded-lg p-4">
+                  <Card className="w-52 h-auto border-black border bg-opacity-80 rounded-lg p-4 transition hover:scale-110 hover:bg-gray-300">
                     <Card.Img variant="top" src={product.IMAGE} className="w-full flex rounded-2xl" />
                     <Card.Body className="flex justify-center items-stretch flex-col w-full">
                       <Card.Title className="m-1 w-full text-lg text-black font-semibold whitespace-nowrap truncate" >
@@ -47,7 +47,7 @@ export const CardProduct = () => {
                           {product.PRICE}$ COP
                         </Card.Text>
                       </div>
-                      <Button className="flex justify-center mt-2 justify-items-center bg-slate-600 rounded-md p-1 w-full text-xs text-white font-semibold hover:bg-gray-800">
+                      <Button className="flex justify-center mt-2 justify-items-center bg-slate-600 rounded-md p-3 w-full text-xs text-white font-semibold hover:bg-gray-800">
                           Agregar al carrito
                         </Button>
                     </Card.Body>
@@ -58,7 +58,7 @@ export const CardProduct = () => {
         </section>
         <section>
           <article>
-            <Pagination
+            <PaginationProduct
               productForPage={productForPage}
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}

@@ -2,7 +2,7 @@ import Form from 'react-bootstrap/Form';
 
 export const FormContact = () => {
     return (
-            <Form className='w-1/2 grid gap-4 p-4 bg-white rounded-xl mt-8'>
+            <Form className='w-1/2 grid gap-4 p-4 bg-white rounded-xl mt-4 mb-10'>
 
                 <Form.Group className='grid gap-4'>
                     <Form.Label className="text-lg text-black font-semibold">Nombre completo</Form.Label>
