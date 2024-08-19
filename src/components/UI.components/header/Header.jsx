@@ -14,7 +14,7 @@ export const Header = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <header className="flex justify-items-center p-9 bg-black">
+    <header className="flex justify-items-center p-7 bg-black">
       <section className="flex justify-between mx-auto w-full">
         <nav className="flex flex-row items-center">
           <Logo icon="icons/Fuxion.png" width="w-8 " size="m-0 text-2xl" text="MamáAlNatural" />

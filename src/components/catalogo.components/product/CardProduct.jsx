@@ -9,12 +9,15 @@ import Button from 'react-bootstrap/Button';
 import { getProduct } from "../../../services/product.services/product/product.services";
 import { PaginationProduct } from "../pagination/PaginationProduct";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 
 export const CardProduct = () => {
 
   const [products, setProducts] = useState([])
   const totalProducts = products.length
-  const [productForPage, setProductForPage] = useState(12)
+  const [productForPage, setProductForPage] = useState(8)
   const [currentPage, setCurrentPage] = useState(1)
 
   const lastIndex = currentPage * productForPage
@@ -33,8 +36,10 @@ export const CardProduct = () => {
             ) : (
               products.map(product => (
                 <article key={product.ID_PRODUCT} className="m-4">
-                  <Card className="w-52 h-auto border-black border bg-opacity-80 rounded-lg p-4 transition hover:scale-110 hover:bg-gray-300">
-                    <Card.Img variant="top" src={product.IMAGE} className="w-full flex rounded-2xl" />
+                  <Card className="w-72 max-w-xs bg-white border border-gray-200 rounded-lg shadow p-4 transition hover:scale-110 hover:bg-gray-300">
+                    <a href="#">
+                      <Card.Img variant="top" src="/icons/photo.svg" className="w-full flex rounded-2xl" />
+                    </a>
                     <Card.Body className="flex justify-center items-stretch flex-col w-full">
                       <Card.Title className="m-1 w-full text-lg text-black font-semibold whitespace-nowrap truncate" >
                         {product.NAME}
@@ -43,13 +48,13 @@ export const CardProduct = () => {
                         {product.DESCRIPTION}
                       </Card.Text>
                       <div className="flex items-center mt-2">
-                        <Card.Text className="m-1 w-full text-xs text-black font-bold text-opacity-85">
+                        <Card.Text className="m-1 w-full text-lg text-black font-bold text-opacity-85">
                           {product.PRICE}$ COP
                         </Card.Text>
                       </div>
                       <Button className="flex justify-center mt-2 justify-items-center bg-slate-600 rounded-md p-3 w-full text-xs text-white font-semibold hover:bg-gray-800">
-                          Agregar al carrito
-                        </Button>
+                        Agregar al carrito
+                      </Button>
                     </Card.Body>
                   </Card>
                 </article>

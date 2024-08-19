@@ -22,11 +22,13 @@ export const CardCategory = () => {
             <p className="flex justify-center items-center text-black">No hay categorias disponibles.</p>
           ) : (
             categories.map(category => (
-              <article key={category.ID_CATEGORY} className="m-4">
-                <Card className="w-48 h-auto bg-gray-300 bg-opacity-95 rounded-md p-4">
-                  <Card.Img variant="top" src={category.IMAGE} className="w-full flex rounded-2xl" />
-                  <Card.Body className="flex flex-col justify-center items-center py-4 px-2 w-full truncate">
-                    <Card.Title className="flex justify-center items-center m-1 w-full text-xs text-black font-semibold">
+              <article key={category.ID_CATEGORY}>
+                <Card className="w-60 h-auto p-4 truncate">
+                  <Card.Img variant="top" src="/icons/photo.svg" className="w-full flex" />
+                  <Card.Body className="flex flex-col justify-start items-center py-4 px-2 w-full">
+                    <Card.Title className="flex justify-between 
+                    text-left font-black text-[30px] text-black font-sans text-shadow-custom text-clip overflow-hidden"
+                    >
                       {category.NAME}
                     </Card.Title>
                     <Card.Text className="m-1 w-full text-black text-opacity-85">

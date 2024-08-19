@@ -6,14 +6,14 @@ import { Title } from "../../components/UI.components/Title"
 export const ProductSection = () => {
     return (
         <>
-        <section className="flex justify-center items-center justify-items-center mt-8">
-            <section className="w-[99%] h-auto">
+        <section className="flex flex-row justify-center items-center justify-items-center">
+            <section className="w-full h-auto">
                 <article className="
                 flex items-center justify-center w-full h-20 text-xl text-black font-semibold rounded-2xl
                 hover:bg-white">
-                    <Title text="Catalogo de Productos" />
+                    <Title text="CATALOGO DE PRODUCTOS" />
                 </article>
-                <article className="flex justify-center w-full p-4 mt-10 mb-10 bg-white">
+                <article className="flex justify-center w-full p-4 mt-10 mb-10 ">
                     <CardProduct />
                 </article>
             </section>

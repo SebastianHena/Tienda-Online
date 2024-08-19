@@ -1,5 +1,5 @@
 export const Title = ({text}) => {
     return (
-            <h1>{text}</h1>
+            <h1 className="text-2xl">{text}</h1>
     )
 }
