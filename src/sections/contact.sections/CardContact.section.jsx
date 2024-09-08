@@ -6,15 +6,16 @@ FormContact
 export const CardContact = () => {
     return (
         <section className="flex justify-center">
-        <section className="w-full h-auto  m-0">
-            <article className="
-            flex items-center justify-center w-full h-20 text-xl text-black font-semibold rounded-2xl mt-6 hover:bg-white">
-                <Title text="¡CONTACTATE CON NOSOTROS!" />
-            </article>
-            <article className="flex justify-center items-center w-full p-10 mb-10">
-            <FormContact />
-            </article>
+            <section className="w-full h-auto m-0">
+                <article className="
+            flex flex-col items-center justify-center w-full h-20 mb-12 text-black">
+                    <h1 className="text-4xl mb-5">¿TIENES ALGUNA <span className="text-green-button">DUDA?</span></h1>
+                    <p className="text-2xl">Queremos darte la mejor de la soluciones, te responderemos muy pronto.</p>
+                </article>
+                <article className="flex justify-center items-center w-full p-10 mb-10">
+                    <FormContact />
+                </article>
+            </section>
         </section>
-    </section>
     )
 }

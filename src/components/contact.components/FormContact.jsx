@@ -4,8 +4,8 @@ export const FormContact = () => {
     return (
         <>
             <section className='flex justify-center justify-items-center w-full h-auto'>
-                <article className='w-1/2 bg-white ml-4 border shadow-2xl rounded-l-xl'>
-                    <Form className='w-full grid gap-4 p-8 rounded-l-xl'>
+                <article className='w-1/2 ml-4'>
+                    <Form className='w-full grid gap-4 p-8'>
                         <Form.Group className='grid gap-4'>
                             <Form.Label className="text-lg text-black font-semibold">Nombre completo</Form.Label>
                             <Form.Control
@@ -42,7 +42,7 @@ export const FormContact = () => {
                         </Form.Group>
 
                         <button
-                            className="bg-blue-300 text-black font-semibold py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300 ease-in-out">
+                            className="bg-green-button text-black font-semibold py-2 px-4 rounded-md hover:bg-green-custom transition-colors duration-300 ease-in-out">
                             Enviar</button>
                     </Form>
                 </article>

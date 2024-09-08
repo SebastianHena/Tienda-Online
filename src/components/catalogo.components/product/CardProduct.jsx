@@ -36,7 +36,7 @@ export const CardProduct = () => {
             ) : (
               products.map(product => (
                 <article key={product.ID_PRODUCT} className="m-4">
-                  <Card className="w-72 max-w-xs bg-white border border-gray-200 rounded-lg shadow p-4 transition hover:scale-110 hover:bg-gray-300">
+                  <Card className="w-72 max-w-xs border border-gray-200 rounded-lg shadow p-4 transition hover:scale-110 hover:bg-gray-300">
                     <a href="#">
                       <Card.Img variant="top" src="/icons/photo.svg" className="w-full flex rounded-2xl" />
                     </a>

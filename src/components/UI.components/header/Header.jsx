@@ -2,10 +2,10 @@
 import { useState } from "react";
 
 // Components
-import { Logo } from "../Logo";
-import {MenuHeader} from "./MenuHeader.jsx"
+import { MenuHeader } from "./MenuHeader.jsx"
 import { Icon } from "../Icon";
 import { Modal } from "./cart/CartModal";
+import { LinkHeader } from "./LinkHeader.jsx";
 
 export const Header = () => {
   const [show, setShow] = useState(false);
@@ -14,17 +14,29 @@ export const Header = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <header className="flex justify-items-center p-7 bg-black">
-      <section className="flex justify-between mx-auto w-full">
-        <nav className="flex flex-row items-center">
-          <Logo icon="icons/Fuxion.png" width="w-8 " size="m-0 text-2xl" text="MamáAlNatural" />
+    <header className="flex justify-items-center p-7">
+      <section className="mx-14 w-full">
+        <nav className="flex flex-row justify-between items-center">
+          <article>
+            <h2 className="text-black text-xl">
+              <strong>MAMÁAL</strong>
+              <span className="text-gray-600">NATURAL</span>
+            </h2>
+          </article>
+          <article>
+            <ul className="flex flex-row gap-24">
+              <LinkHeader url="/" name="Inicio" />
+              <LinkHeader url="/" name="Productos" />
+              <LinkHeader url="/" name="Contacto" />
+            </ul>
+          </article>
+          <article className="flex items-center gap-x-8 mr-4">
+            <Icon icon="/icons/lupa.svg" />
+            <Icon onClick={handleShow} icon="/icons/shopingCart.svg" />
+            <MenuHeader />
+            {show && <Modal handleClose={handleClose} />}
+          </article>
         </nav>
-        <section className="flex items-center gap-x-8 mr-4">
-          <Icon icon="/icons/lupa.svg" />
-          <Icon onClick={handleShow} icon="/icons/shopingCart.svg" />
-          <MenuHeader/>
-          {show && <Modal handleClose={handleClose} />}
-        </section>
       </section>
     </header>
   );

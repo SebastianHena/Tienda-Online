@@ -5,7 +5,6 @@ import { CategorySection } from "../sections/catalogo.sections/Category.section"
 export const Catalogo = () => {
     return (
         <>
-            <CategorySection />
             <ProductSection />
         </>
     )

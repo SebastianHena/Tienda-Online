@@ -27,7 +27,7 @@ export const CardCategory = () => {
                   <Card.Img variant="top" src="/icons/photo.svg" className="w-full flex" />
                   <Card.Body className="flex flex-col justify-start items-center py-4 px-2 w-full">
                     <Card.Title className="flex justify-between 
-                    text-left font-black text-[30px] text-black font-sans text-shadow-custom text-clip overflow-hidden"
+                    text-left font-black text-xl text-black font-sans text-shadow-custom text-clip overflow-hidden"
                     >
                       {category.NAME}
                     </Card.Title>

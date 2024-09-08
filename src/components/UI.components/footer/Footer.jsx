@@ -6,7 +6,7 @@ import { Legal } from "./legal/Legal"
 
 export const Footer = () => {
     return (
-        <footer className="grid justify-items-center mt-8 bg-black">
+        <footer className="grid justify-items-center mt-8 bg-gray-900">
             <section className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <section className="md:flex md:justify-between">
                     <article className="mb-6 md:mb-0">
