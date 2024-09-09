@@ -5,7 +5,7 @@ FormContact
 
 export const CardContact = () => {
     return (
-        <section className="flex justify-center">
+        <section className="flex justify-center" id="contact">
             <section className="w-full h-auto m-0">
                 <article className="
             flex flex-col items-center justify-center w-full h-20 mb-12 text-black">

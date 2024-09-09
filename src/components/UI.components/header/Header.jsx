@@ -14,7 +14,7 @@ export const Header = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <header className="flex justify-items-center p-7">
+    <header className="flex justify-items-center p-7 sticky top-0 bg-body-color">
       <section className="mx-14 w-full">
         <nav className="flex flex-row justify-between items-center">
           <article>
@@ -25,9 +25,9 @@ export const Header = () => {
           </article>
           <article>
             <ul className="flex flex-row gap-24">
-              <LinkHeader url="/" name="Inicio" />
-              <LinkHeader url="/" name="Productos" />
-              <LinkHeader url="/" name="Contacto" />
+              <LinkHeader url="#home" name="Inicio" />
+              <LinkHeader url="#products" name="Productos" />
+              <LinkHeader url="#contact" name="Contacto" />
             </ul>
           </article>
           <article className="flex items-center gap-x-8 mr-4">

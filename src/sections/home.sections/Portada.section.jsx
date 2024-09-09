@@ -4,7 +4,7 @@ import { Separation } from "../../components/UI.components/Separation"
 export const Portada = ({ }) => {
     return (
         <>
-            <section className="flex justify-center mt-28">
+            <section className="flex justify-center mt-28" id="home">
                 <PortadaPrincipal />
             </section>
             <Separation

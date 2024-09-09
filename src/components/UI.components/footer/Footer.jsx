@@ -10,7 +10,10 @@ export const Footer = () => {
             <section className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <section className="md:flex md:justify-between">
                     <article className="mb-6 md:mb-0">
-                        <Logo icon="icons/Fuxion.png" width="w-8" size="m-0 text-2xl" text="MamáAlNatural" />
+                        <h2 className="text-white text-xl">
+                            <strong>MAMÁAL</strong>
+                            <span className="text-gray-600">NATURAL</span>
+                        </h2>
                     </article>
                     <section className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <article>

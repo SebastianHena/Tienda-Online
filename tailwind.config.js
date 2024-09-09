@@ -8,7 +8,8 @@ export default {
     extend: {
       backgroundColor: {
         'green-custom': '#2F8D5B',
-        'green-button': '#5abd88'
+        'green-button': '#5abd88',
+        'body-color': '#f8f5f1'
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(28deg, transparent 10%, #64748B 0% 90%, transparent 80%)',

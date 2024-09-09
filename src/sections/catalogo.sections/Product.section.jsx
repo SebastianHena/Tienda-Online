@@ -7,7 +7,7 @@ import { Separation } from "../../components/UI.components/Separation"
 export const ProductSection = () => {
     return (
         <>
-            <section className="flex flex-row justify-center items-center justify-items-center">
+            <section className="flex flex-row justify-center items-center justify-items-center" id="products">
                 <section className="w-full h-auto">
                     <article className="
             flex flex-col items-center justify-center w-full h-20 mb-24 text-black">
