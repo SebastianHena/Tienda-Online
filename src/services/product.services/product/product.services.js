@@ -7,7 +7,8 @@ export const getProduct = () => {
         console.log("Datos recibidos:", data);
         return(data);
       })
+      /*
       .catch(error => {
         console.error("Error al obtener los datos:", error);
-      });
+      });*/ 
 }

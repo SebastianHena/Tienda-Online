@@ -19,8 +19,8 @@ export const Header = () => {
         <nav className="flex flex-row justify-between items-center">
           <article>
             <h2 className="text-black text-xl">
-              <strong>MAMÁAL</strong>
-              <span className="text-gray-600">NATURAL</span>
+              <a href="#home"><strong>MAMÁAL</strong>
+                <span className="text-gray-600">NATURAL</span></a>
             </h2>
           </article>
           <article>

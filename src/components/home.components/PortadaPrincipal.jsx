@@ -10,13 +10,13 @@ export const PortadaPrincipal = () => {
                         <div>
                             <button className="text-xl bg-green-button w-56 h-11 px-8 py-2 rounded-2xl
                              hover:bg-green-custom transition-transform duration-200 ease-in-out hover:scale-110">
-                                Productos
+                                <a href="#products">Productos</a>
                             </button>
                         </div>
                         <div>
                             <button className="text-xl bg-green-button w-56 h-11 px-8 py-2 rounded-2xl
                              hover:bg-green-custom transition-transform duration-200 ease-in-out hover:scale-110">
-                                Contacto
+                                <a href="#contact">Contacto</a>
                             </button>
                         </div>
                     </article>
