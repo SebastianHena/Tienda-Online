@@ -14,7 +14,7 @@ export const Header = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <header className="flex justify-items-center p-7 top-0 bg-body-color sticky">
+    <header className="flex justify-items-center p-4 top-0 bg-body-color w-full z-50 shadow-md fixed">
       <section className="mx-14 w-full">
         <nav className="flex flex-col justify-between items-center md:flex-row gap-6">
           <article>
@@ -31,7 +31,6 @@ export const Header = () => {
             </ul>
           </article>
           <article className="flex items-center gap-x-8 mr-4">
-            <Icon icon="/icons/lupa.svg" />
             <Icon onClick={handleShow} icon="/icons/shopingCart.svg" />
             <MenuHeader />
             {show && <Modal handleClose={handleClose} />}

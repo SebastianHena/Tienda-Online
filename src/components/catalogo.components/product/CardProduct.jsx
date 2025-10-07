@@ -1,5 +1,6 @@
 //Hooks
 import { useState, useEffect } from "react";
+import { useCart } from "../../../context/CartContext";
 
 //Components boostrap
 import { Card } from "react-bootstrap";
@@ -26,6 +27,9 @@ export const CardProduct = () => {
 
   useEffect(() => { getProduct().then(setProducts) }, []);
 
+  //Hook para agregar al carrito
+  const { addToCart } = useCart();
+
   return (
     <>
       <section className="grid justify-center items-center justify-items-center">
@@ -36,7 +40,7 @@ export const CardProduct = () => {
             ) : (
               products.map(product => (
                 <article key={product.ID_PRODUCT} className="m-4">
-                  <Card className="w-72 max-w-xs border border-gray-200 rounded-lg shadow p-4 transition hover:scale-110 hover:bg-gray-300">
+                  <Card className="w-60 max-w-xs border border-gray-200 rounded-lg shadow p-4 transition hover:scale-105 hover:bg-gray-300">
                     <a href="#">
                       <Card.Img variant="top" src="/icons/photo.svg" className="w-full flex rounded-2xl" />
                     </a>
@@ -52,7 +56,15 @@ export const CardProduct = () => {
                           {product.PRICE}$ COP
                         </Card.Text>
                       </div>
-                      <Button className="flex justify-center mt-2 justify-items-center bg-slate-600 rounded-md p-3 w-full text-xs text-white font-semibold hover:bg-gray-800">
+                      <Button className="flex justify-center mt-2 justify-items-center bg-slate-600 rounded-md p-3 w-full text-xs text-white font-semibold hover:bg-gray-800"
+                        onClick={() => {addToCart({
+                          id: product.ID_PRODUCT,
+                          name: product.NAME,
+                          price: product.PRICE,
+                          image: "/icons/photo.svg"
+                              })
+                              alert("Producto agregado al carrito");
+                            }}>
                         Agregar al carrito
                       </Button>
                     </Card.Body>

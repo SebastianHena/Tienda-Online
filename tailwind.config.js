@@ -54,7 +54,7 @@ export default {
             content: '""',
             position: 'absolute',
             width: '100%',
-            height: '6px', // Ajusta el grosor de la línea si es necesario
+            height: '4px', // Ajusta el grosor de la línea si es necesario
             bottom: '0',
             left: '0',
             backgroundColor: '#38a169', // Cambia este valor por el color deseado
