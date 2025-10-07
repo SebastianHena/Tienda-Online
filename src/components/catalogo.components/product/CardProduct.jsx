@@ -17,7 +17,7 @@ export const CardProduct = () => {
 
   const [products, setProducts] = useState([])
   const totalProducts = products.length
-  const [productForPage, setProductForPage] = useState(3)
+  const [productForPage, setProductForPage] = useState(4)
   const [currentPage, setCurrentPage] = useState(1)
 
   const lastIndex = currentPage * productForPage

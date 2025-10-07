@@ -14,7 +14,7 @@ export const Header = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <header className="flex justify-items-center p-7 top-0 bg-body-color">
+    <header className="flex justify-items-center p-7 top-0 bg-body-color sticky">
       <section className="mx-14 w-full">
         <nav className="flex flex-col justify-between items-center md:flex-row gap-6">
           <article>
