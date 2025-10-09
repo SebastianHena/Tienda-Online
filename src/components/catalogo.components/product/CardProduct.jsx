@@ -10,8 +10,8 @@ import Button from 'react-bootstrap/Button';
 import { getProduct } from "../../../services/product.services/product/product.services";
 import { PaginationProduct } from "../pagination/PaginationProduct";
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+//alerts
+import toast from "react-hot-toast";
 
 
 export const CardProduct = () => {
@@ -63,7 +63,7 @@ export const CardProduct = () => {
                           price: product.PRICE,
                           image: "/icons/photo.svg"
                               })
-                              alert("Producto agregado al carrito");
+                              toast.success('¡Producto agregado al carrito 🛒!');
                             }}>
                         Agregar al carrito
                       </Button>

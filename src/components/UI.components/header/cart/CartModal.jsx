@@ -1,13 +1,16 @@
 import { AiOutlineClose } from 'react-icons/ai';
 import { useCart } from "../../../../context/CartContext.jsx";
 
+//alerts
+import toast from "react-hot-toast";
+
 export const Modal = ({ handleClose }) => {
 
     const { cartItems, removeFromCart } = useCart();
 
     return (
         <div className="fixed inset-0 flex justify-end bg-gray-900 bg-opacity-50 z-50">
-            <div className="bg-white p-8 w-96">
+            <div className="bg-white p-6 w-auto">
 
             //Encabezado del modal
                 <header>
@@ -20,7 +23,7 @@ export const Modal = ({ handleClose }) => {
                 </header>
 
             //Contenido del carrito
-                <section className="space-y-3 max-h-60 overflow-y-auto">
+                <section className="space-y-3 max-h-96 overflow-y-auto">
                     {cartItems.length === 0 ? (
                         <p className="text-center text-gray-500 text-sm">
                             Tu carrito está vacío.
@@ -48,7 +51,9 @@ export const Modal = ({ handleClose }) => {
 
                                 {/* Botón eliminar */}
                                 <button
-                                    onClick={() => removeFromCart(item.id)}
+                                    onClick={() => {removeFromCart(item.id)
+                                        toast.success('¡Producto eliminado del carrito 🛒!');
+                                    }}
                                     className="text-red-500 hover:text-red-700 text-xs font-medium"
                                 >
                                     Eliminar
